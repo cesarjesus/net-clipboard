@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{542F9DB9-5834-4DDF-9B67-27938791758B}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clipboard-listener", "clipboard-listener\clipboard-listener.csproj", "{D6D1D28D-D16E-4280-98B7-152919671822}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6D1D28D-D16E-4280-98B7-152919671822}.Debug|x86.ActiveCfg = Debug|x86
+		{D6D1D28D-D16E-4280-98B7-152919671822}.Debug|x86.Build.0 = Debug|x86
+		{D6D1D28D-D16E-4280-98B7-152919671822}.Release|x86.ActiveCfg = Release|x86
+		{D6D1D28D-D16E-4280-98B7-152919671822}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = clipboard-listener\clipboard-listener.csproj
+	EndGlobalSection
+EndGlobal

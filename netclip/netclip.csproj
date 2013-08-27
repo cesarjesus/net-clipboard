@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D6D1D28D-D16E-4280-98B7-152919671822}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>clipboardlistener</RootNamespace>
-    <AssemblyName>clipboard-listener</AssemblyName>
+    <ProjectGuid>{B6839440-4D39-48EA-BD7F-CF5E4A1397E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>netclip</RootNamespace>
+    <AssemblyName>netclip</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -19,7 +19,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>none</DebugType>
@@ -28,20 +28,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
-    <Externalconsole>true</Externalconsole>
+    <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="ClipboardListener.cs" />
+    <Compile Include="NetClipboard.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Content Include="app.desktop">
       <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\clipboard-listener\clipboard-listener.csproj">
+      <Project>{D6D1D28D-D16E-4280-98B7-152919671822}</Project>
+      <Name>clipboard-listener</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

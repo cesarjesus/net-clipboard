@@ -4,17 +4,9 @@ using System.Windows.Forms;
 
 namespace clipboardlistener
 {
-	class ClipboardListener
+	public class ClipboardListener
 	{
 		public static event EventHandler ClipboardUpdate;
-		
-		private static CBFNotification notification = new CBFNotification();
-			
-		public static void Main (string[] args)
-		{
-			Console.WriteLine ("Hello World!");
-			notification.GetType();
-		}
 		
 		private static void OnClipboardUpdate(EventArgs e)
 		{
